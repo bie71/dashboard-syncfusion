@@ -24,6 +24,7 @@ import {
 } from "./pages";
 
 import "./App.css";
+import "./style.css";
 
 import { useStateContext } from "./contexts/ContextProvider";
 
@@ -63,7 +64,7 @@ function App() {
               activeMenu ? "md:ml-72" : "flex-2"
             }`}
           >
-            <div className="fixed bg-main-bg dark:bg-main-dark-bg navbar w-full">
+            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
 
@@ -92,11 +93,12 @@ function App() {
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/financial" element={<Financial />} />
-                <Route path="/color-mappng" element={<ColorMapping />} />
+                <Route path="/color-mapping" element={<ColorMapping />} />
                 <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} />
               </Routes>
             </div>
+            <Footer />
           </div>
         </div>
       </BrowserRouter>
